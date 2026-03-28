@@ -1,0 +1,653 @@
+.body{
+    font: 14px /1.5;
+    color: #333;
+}
+
+
+
+
+/*顶部栏start*/
+.topBar{
+    width: 100%;
+    height: 40px;
+    background-color:#333;
+    position: fixed;     /* 固定定位，悬浮在顶部 */
+    top: 0;     /* 贴紧页面顶端 */
+    left: 0;     /* 贴紧页面左端 */
+    z-index: 9999;     /* 置顶，不被任何元素遮挡 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);     /* 加轻微阴影，更立体 */
+}
+.container{
+    width: 1261px;   /* 顶部栏里面的列表的宽度 */
+    height: 100%;
+    margin: auto;
+}
+.topBar .topBar_list{
+    float: left;
+    margin-left: 70px; /* 字体右移动 */
+}
+.topBar .shop{
+    float: right;
+    margin-left: 30px; /* 字体左间距 */
+    margin-right: 20px; /* 调整：从80px改20px，给登录区留空间 */
+    width: 100px; /* 框架的宽度 */
+    height: 40px;
+    text-align: center;
+    background-color: #424242;
+}
+/* 登录/注册区域样式（融合原有+修复显示） */
+.topBar .login{
+    float: right;
+    margin-right: 80px; /* 和购物车保持整体右间距 */
+    line-height: 40px;  /* 垂直居中，和购物车高度一致 */
+}
+/* 登录/注册文字样式（匹配你的顶部栏风格） */
+.topBar .login a{
+    color: #b0b0b0;     /* 和顶部栏其他文字同色 */
+    font-size: 12px;    /* 和顶部栏字体大小一致 */
+    margin: 0 5px;      /* 按钮间间距 */
+    text-decoration: none;
+}
+.topBar .login a:hover{
+    color: #fff;        /*  hover时变白，和其他链接一致 */
+}
+.topBar .login span{
+    color: #424242;     /* 分隔符颜色，和顶部栏其他|一致 */
+    margin: 0 0.5em;
+}
+/* 原有顶部栏通用样式保留 */
+.topBar a{
+    color: #b0b0b0;
+    font-size: 12px; /* 顶部栏所有字体设置 */
+    display: inline-block;
+    line-height: 40px;   
+}
+.topBar .shop a{ 
+    width: 100px; /* a标签的点击面积 */
+    height: 40px;
+}
+.topBar a:hover{
+    color: #fff;
+}
+.topBar span{
+    color: #424242;
+    margin: 0.5em;
+}
+/*顶部栏end*/
+
+
+
+
+/*导航栏start*/
+.header{
+    height: 120px;       /* 导航栏整体框架的高度 */
+    margin-top: 40px !important;       /* 等于topBar的高度，避开遮挡 */
+    position: relative;       /* 确保层级正常 */
+    z-index: 999;       /* 低于topBar但高于其他内容 */
+}
+/* LOGO区域样式3/1 */
+.header .site-logo{
+    float: left; /* 左浮动 */
+    width: 90px; /* 跟logo图片大小一致 */
+    margin-top: 35px; /* logo下移数值 */
+    margin-left: 35px; /* !!!!!!!!!! */
+}
+.header .site-logo a{
+    display: block; /* 将a标签转成块 */
+    width: 90px;
+    height: 55px; /* 跟logo图片大小一致 */
+}
+/* 菜单列表区域样式3/2 */
+.header .site-list{
+    float: left; /* 左浮动 */
+    width: 500px; /* 列表的固定宽度 */
+}
+.header .site-list>ul{ /* ">"子代选择器 */
+    width: 850px; /* ul的固定宽度 */
+    height: 80px;
+    padding: 20px 0 0 120px; /* 上边距，又边距，下边距，左边距 */
+    font-size: 16px; /* 字体大小 */
+}
+.header .site-list>ul>li{ /* ul下的li标签 */
+    float: left; /* 左浮动 */
+}
+.header .site-list>ul>li>a{ /* ul li下的a标签 */
+    display: block;
+    padding: 28px 10px 28px; /* 字体下边距，间距，下边距*/
+    color: #424242;
+}
+.header .site-list>ul>li>a:hover{ /* 鼠标放在菜单栏上显示的字体颜色 */
+    color: fuchsia;
+}
+.header .site-list>ul .site-category>a{ /* ul li下的site-category的a标签 */
+    padding: 0;  /* 第二个logo */
+    height: 76px; 
+}
+.header .site-list>ul .site-category{ /* 站点 */ /* 耗费大量时间找错，要牢记 */
+    position: relative; /* 相同定位-绝对定位2 */
+    z-index: 3;
+}
+.header .site-list>ul .site-category .category-list{
+    position: absolute; /* 绝对定位 */
+    top: 100px;   /* 顶部移动 */
+    left: -245px; /* 左移动 */
+    width: 295px;   /* 站点的宽高 */
+    height: 559px;
+    background-color:rgb(143, 75, 74,0.9);/* r(red)g(green)b(blue)a(透明度)  */
+    border-radius: 17px 0px 0px 17px;  /* 站点边框圆角 */
+}
+.category-list>ul{
+    width: 295px; /* 与上面的保持相同 */
+    height: 500px;
+    padding: 30px 0; /* 上下边距 */
+}
+.category-list>ul>li{
+    height: 55px; /* 557的高度 除以 10个选项 等于55px */
+}
+.category-list>ul>li>a{
+    padding-left: 28px;
+    display: block; /* a标签转成块 */
+    height: 55px;
+    line-height: 55px;
+    font-size: 16px;
+    color: #fff;  /* 注意子代选择器 */
+    position: relative;/* 父元素 */
+}
+.category-list>ul>li>a:hover{
+    background-color:rgba(238,169,184,0.6);
+}
+.category-list>ul>li>a>span{
+    position:absolute; /* 子元素 */
+    top:7px;            /* 给>属性 */
+    right: 20px;
+    font-size: 16px;
+    line-height: 40px;
+}
+/* 菜单区域列表样式end */
+
+
+
+
+/* 搜索栏区域样式3/3 */
+.header .site-search{ 
+    float: right; /* 右浮动 */
+    width: 500px; /* 设置固定宽度 */
+    margin-top: 38px; /* 往下移动 */
+} 
+.header .site-search form{  /* 搜索框里面的区域 */
+    width: 500px; /* 内区域的宽度保持一样 */
+    height: 40px;
+    position: relative;/* 相同定位123 */
+}
+.header .site-search form .search-text{ /* 搜索框内区域的设置 */
+    width: 450px;
+    height: 34px;
+    border: 1.5px solid #ed1941;
+    font-size: 12px; /* 搜索框内输入文字的字体大小 */
+    color: #494949;
+    padding: 1px 10px;
+    border-radius: 30px 30px 30px 30px;
+}
+.header .site-search form .search-btn{
+    position: absolute;
+    right: 26px;
+    top: 0;
+    float: right;
+    height: 38px;
+    width: 74px;
+    background-color:#ed1941;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 30px 30px 30px 30px;
+    z-index: 999 !important; /* 👈 就是加了这一行 */
+    cursor: pointer;        /* 👈 再加这个，鼠标变小手 */
+}
+.header .site-search form .search-btn:hover{
+    background-color:#c31b31;
+}
+/* 搜索栏区域样式end */
+/*导航栏end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 站点内容start */
+.site-content .site-slider{
+    position: relative; /* 相对定位 */
+    width: 1261px;
+    height: 559px;
+}
+/* 轮播图 */
+.site-content .site-slider a{
+    position: absolute; /* 绝对定位 */
+    z-index: 2;
+    display: block;
+    opacity: 0;  /* 图片隐藏显示属性，轮播图要素！！！！！！！ */
+    transition: all 1.5s; /* 图片1.5喵以后隐藏 */
+}
+.site-content .site-slider a:nth-child(1){
+    opacity: 1; /* 显示第一张图片 */
+}
+.site-content .site-slider a img{
+    border-radius: 17px 17px 17px 17px; /* 图片四周圆角显示 */
+    width: 1260px;
+    box-shadow: 1px 1px 1px  rgba(181, 50, 78, 0.6);
+}
+
+
+
+
+
+/* 左右切换按钮 */
+.site-content .site-slider .prev,.yqh{
+    position: absolute; /* 绝对定位 */
+    z-index: 3;
+    width: 41px;
+    height: 69px;
+    background: url(../images/10006.png);
+    top: 50%;
+    margin-top: -37px;
+    cursor:pointer;
+}
+
+/* 左切换按钮 */
+.site-content .site-slider .prev{ 
+    background-position: -83px 0;
+    left: 295px;
+    border-radius: 17px 17px 17px 17px;
+}
+.site-content .site-slider .prev:hover{
+    background-position: 0 0;
+}
+/* 右切换按钮 */
+.site-content .site-slider .yqh{ 
+    border-radius: 17px 17px 17px 17px;
+    background-position: -125px 0; 
+    right: 0;
+}
+.site-content .site-slider .yqh:hover{
+    background-position: -43px 0;
+}
+
+
+
+
+
+
+/* 五个小圆点 */
+.site-content .slider-item{
+    position: absolute;
+    z-index: 4;
+    width: 180px;
+    height: 30px;
+    text-align: right;
+    top: 520px;
+    right: 30px;
+}
+.slider-item span{
+    display: inline-block; /* 转成块 */
+    width: 7px;  /* 圈圈宽度 */
+    height: 7px; /* 圈圈高度 */
+    border: 1px solid rgba(181, 50, 78,0.9); /* 红色框框 */
+    background-color:rgba(238, 238, 238, 0.4); /* 白色心心 */
+    margin: 0 5px; /* 圈圈间距 */
+    border-radius: 7px; /* 方块变成圆圈 */
+}
+.slider-item span:nth-child(1){
+    background-color: #fff;
+}
+.slider-item span:hover{
+    cursor:pointer;
+    width: 9px;
+    height: 9px;
+}
+/* 轮播图end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 向导样式start */
+.content-sub{
+    margin-top: 18px;
+    overflow: hidden;
+}
+.content-sub .content-channel{
+    float: left;
+    width: 294px;
+}
+.content-sub .content-channel ul{
+    background: rgb(142, 69, 63,0.9);
+    font-size: 14px;
+    text-align: center;
+    border-radius: 17px 0 0 17px;
+    box-shadow: 1px 1px 1px  rgba(181, 50, 78, 0.6);
+}
+.content-sub .content-channel ul li{
+    float: left;
+    width: 33.33%;
+    height: 120px;
+}
+.content-sub .content-channel ul li a{
+    display: block;
+    padding-top: 18px;
+    color: rgba(255,255,255,0.7);
+}
+.content-sub .content-channel ul li a:hover{
+    color:#76becc;
+}
+.content-sub .content-channel ul li a img{
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding-left: 34px;
+    padding-bottom: 5px;
+}
+.content-sub .content-list{
+    float: left;
+    width: 965px;
+}
+.content-sub .content-list{
+    float: left;
+    width: 965px;
+}
+.content-sub .content-list ul{
+    width: 100%;
+}
+.content-sub .content-list ul li{
+    float: left;
+    width: 33.33%;
+    height: 240px;
+    text-align: right;
+}
+.content-sub .content-list ul li a{
+    display: block;
+    height: 240px;
+}
+.content-sub .content-list ul li a img.a-css{ /* !!!!!!!!!!!!!!!!! */
+    border-radius: 0 17px 17px 0;
+}
+.content-sub .content-list ul{
+    width: 100%;
+}
+.content-sub .content-list ul li a img{
+    width: 300px;
+    height: 240px;
+    box-shadow: 1px 1px 1px  rgba(181, 50, 78, 0.6);
+}
+.content-sub .content-list ul li a img:hover{
+    box-shadow: 2px 2px 2px  rgba(181, 50, 78, 0.6);
+}
+.content-banner{
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+.content-banner a{
+    display: block;
+    width: 1261px;
+}
+.content-banner a img{
+    border-radius: 17px 17px 17px 17px;
+    display: block;
+    width: 1261px;
+}
+.content-banner a img:hover{
+    box-shadow: 1px 1px 1px  rgba(181, 50, 78, 0.6);
+}
+/* 向导样式end */
+/* 站点内容end */
+
+
+
+
+/* 主页内容start */
+.content-desc{
+padding-top: 5px;
+background-color: #f1f1f1;
+height: 850px;
+}
+
+
+
+/* 内容详情标题start */
+.content-desc .box-hd{
+    height: 60px;
+    position:relative;
+}
+.content-desc .box-hd h2{
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 60px;
+    color: #333;
+}
+.content-desc .box-hd .more{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.content-desc .box-hd .more a{
+    font-size: 14px;
+    line-height: 80px;
+    color: #424242;
+}
+.content-desc .box-hd .more a i{
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background-color: #b0b0b0;
+}   /* 暂时无用 */
+.content-desc .box-hd .more:hover a{
+    color: #9f88f9;
+}
+/* 内容详情标题end */
+
+
+
+.box-bd .row-l{
+    float: left;
+    width: 240px;    /* 241+1021=1261 */
+}
+.box-bd .row-r{
+    float: left;
+    width: 1021px;
+}
+.box-bd .row-l a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.box-bd .row-l a img{
+    width: 240px;
+    height: 695px;
+}
+.box-bd .row-r ul{
+    overflow: hidden;
+}
+.box-bd .row-r ul li{
+    float: left;
+    height: 340px;
+    background-color: #fff;
+    width: 240px;
+    position: relative;
+    margin-left: 15px; /* 240*4=960 +61=1021px 61=4=15px */
+    margin-bottom: 15px;
+
+}
+.box-bd .row-r ul li img{
+    width: 240px;
+    height: 240px;
+}
+.box-bd .row-r ul li .figure{
+    margin: 0 auto 18px;
+    width: 240px;
+    height: 240px;
+}
+.box-bd .row-r ul li .figure a{
+    display: block;
+}
+.box-bd .row-r ul li .figure a img{
+    width: 240px;
+    height: 240px;
+}
+.box-bd .row-r ul li .title{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+.box-bd .row-r ul li .title a{
+    color: #333;
+}
+.box-bd .row-r ul li .desc{
+    height: 18px;
+    font-size: 12px;
+    text-align: center;
+    color: #b0b0b0;
+    margin: 0 10px 10px; /* 上方0，左右10 下10 */
+    overflow: hidden;
+    white-space: nowrap; /* 文本不允许换行 */
+    text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+.box-bd .row-r ul li .price{
+    text-align: center;
+    color:#bb50bd;
+}
+.box-bd .row-r ul li .flag{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 20px;
+    background-color:rgb(0, 170, 170,0.7);
+    text-align: center; /* 字体居中 */
+    color: #fff;
+    left: 50%;
+    margin-left: -32px;
+    font-size: 14px;
+}
+.box-bd .row-r ul li .flag-boom{
+    background-color: rgb(195, 27, 49,0.7);
+}
+/* 主页内容end */
+
+
+
+
+/* 尾部start */
+/* 尾部标题start */
+.footer .container .footer-service ul li img{
+    width: 40px;  /* 图片的大小 */
+    height: 40px;
+    margin-right: 6px;
+    vertical-align: -14px;
+}
+
+.footer .footer-service{ /* 给它边距和线的颜色 */
+    padding: 50px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.footer .footer-service ul li{
+    float: left;
+    width: 24%;
+    height: 40px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+.footer .footer-service ul li a{
+    color:#00aaaa;
+}
+/* 尾部标题end */
+.footer .footer-links{
+    padding: 30px 0;
+    height: 170px;
+}
+.footer .footer-links dl{
+    float: left;
+    width: 252px; /* 五个 *252等于1260 */
+    height: 120px;
+}
+.footer .footer-links dl dt{
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #424242;
+}
+.footer .footer-links dl dd{
+    font-size: 12px;
+    margin-top: 10px;
+    color: #757575;
+    cursor: pointer; /* 给文本添加指针 */
+}
+.footer .footer-links dl dd:hover{
+    color: #e58ecf;
+}
+.footer .footer-links .col-contact{
+    float: right;
+    width: 240px;
+    height: 120px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 12px;
+}
+.footer .footer-links .col-contact a img{
+    width: 85px;
+    height: 85px;
+}
+.footer .footer-links .col-contact .iphone{
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+/* 尾部end */
+
+
+
+
+/* 注释 */
+.clearfix::after{
+    content:'';
+    clear:both;
+    display: block;
+}
+
+/* 1. 全局背景：淡粉渐变 + 左右细红边，呼应你的主题色 */
+body {
+  margin: 0;  /* 清除默认边距，让背景铺满 */
+  padding: 0;
+
+  /* 淡粉→白→淡粉的渐变，柔和不刺眼 */
+  background: linear-gradient(to right, #fdf2f5, #ffffff, #fdf2f5);
+  min-height: 100vh; /* 背景铺满整个页面高度 */
+  /* 左右加细红边，强化视觉边界，呼应#ed1941主色 */
+  border-left: 2px solid rgba(237, 25, 65, 0.2);
+  border-right: 2px solid rgba(237, 25, 65, 0.2);
+}

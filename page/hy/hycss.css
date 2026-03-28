@@ -1,0 +1,224 @@
+.body{
+    font: 14px /1.5;
+    color: #333;
+}
+
+
+
+
+/*顶部栏start*/
+.topBar{
+    width: 100%;
+    height: 30px;
+    background-color:rgb(241, 241, 241);
+}
+.container{
+    width: 1261px;   /* 顶部栏里面的列表的宽度 */
+    height: 100%;
+    margin: auto;
+    
+}
+.topBar .topBar_list{
+    float: left;
+    margin-left: 130px; /* 字体右移动 */
+}
+.topBar .shop{
+    float: right;
+    margin-left: 30px; /* 字体左间距 */
+    margin-right: 140px; /* 字体右间距 */
+    width: 100px; /* 框架的宽度 */
+    height: 30px;
+    text-align: center;
+}
+.topBar .login{
+    float: right;
+}
+.topBar a{
+    color: rgb(150, 150, 150);
+    font-size: 12px; /* 顶部栏所有字体设置 */
+    display: inline-block;
+    line-height: 30px;   
+}
+.topBar .shop a{ 
+    width: 100px; /* a标签的点击面积 */
+    height: 30px;
+}
+.topBar a:hover{
+    color: #c31b31;
+}
+.topBar span{
+    color: rgb(150,150,150);
+    margin: 0.5em;
+}
+/*顶部栏end*/
+
+
+
+
+/*导航栏start*/
+.header{
+    background-color: rgba(249, 249, 249, 0.6);
+    height: 120px; /* 导航栏整体框架的高度 */
+}
+/* LOGO区域样式3/1 */
+.header .site-logo{
+    float: left; /* 左浮动 */
+    width: 90px; /* 跟logo图片大小一致 */
+    margin-top: 35px; /* logo下移数值 */
+    margin-left: 70px; /* !!!!!!!!!! */
+}
+.header .site-logo a{
+    display: block; /* 将a标签转成块 */
+    width: 90px;
+    height: 55px; /* 跟logo图片大小一致 */
+}
+/* 搜索栏区域样式3/3 */
+.header .site-search{ 
+    float: right; /* 右浮动 */
+    width: 500px; /* 设置固定宽度 */
+    margin-top: 38px; /* 往下移动 */
+} 
+.header .site-search form{  /* 搜索框里面的区域 */
+    width: 500px; /* 内区域的宽度保持一样 */
+    height: 40px;
+    position: relative;/* 相同定位123 */
+}
+.header .site-search form .search-text{ /* 搜索框内区域的设置 */
+    width: 450px;
+    height: 34px;
+    border: 1.5px solid #ed1941;
+    font-size: 12px; /* 搜索框内输入文字的字体大小 */
+    color: #494949;
+    padding: 1px 10px;
+    box-shadow: 2px 2px 2px  rgba(237, 25, 65, 0.8);
+}
+.header .site-search form .search-btn{
+    position: absolute;
+    right: 26px;
+    top: 0;
+    float: right;
+    height: 38px;
+    width: 74px;
+    background-color:#ed1941;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 2px 2px 2px  rgba(237, 25, 65, 0.8);
+}
+.header .site-search form .search-btn:hover{
+    background-color:#c31b31;
+}
+/* 搜索栏区域样式end */
+/*导航栏end*/
+
+
+
+
+/* 主页内容start */
+.content-desc{
+    border-radius: 20px 20px 20px 20px; 
+    width: 100%;
+    background-color: #f69c9f;
+    height: 800px;
+    box-shadow: 2px 2px 2px  rgba(246, 156, 159, 0.7);
+}
+
+/* 内容详情标题start */
+.content-desc .box-hd{
+    height: 60px;
+    position:relative;
+}
+.content-desc .box-hd .more{
+    position: absolute;
+
+}
+.content-desc .box-hd .more a{
+    margin-left: 85px;
+    font-size: 20px;
+    line-height: 70px;
+    color: #840228;
+}
+.content-desc .box-hd .more:hover a{
+    color: #ffffff;
+}
+.content-desc .box-bd .row a img{
+    border-radius: 30px 30px 30px 30px; 
+    box-shadow: 2px 2px 2px  rgba(237, 25, 64, 0.4);   
+}
+/* 内容详情标题end */
+
+
+/* 尾部start */
+/* 尾部标题start */
+.footer .container .footer-service ul li img{
+    width: 40px;  /* 图片的大小 */
+    height: 40px;
+    margin-right: 6px;
+    vertical-align: -14px;
+}
+
+.footer .footer-service{ /* 给它边距和线的颜色 */
+    padding: 50px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.footer .footer-service ul li{
+    float: left;
+    width: 24%;
+    height: 40px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+.footer .footer-service ul li a{
+    color:#00aaaa;
+}
+/* 尾部标题end */
+.footer .footer-links{
+    padding: 30px 0;
+    height: 170px;
+}
+.footer .footer-links dl{
+    float: left;
+    width: 252px; /* 五个 *252等于1260 */
+    height: 120px;
+}
+.footer .footer-links dl dt{
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #424242;
+}
+.footer .footer-links dl dd{
+    font-size: 12px;
+    margin-top: 10px;
+    color: #757575;
+    cursor: pointer; /* 给文本添加指针 */
+}
+.footer .footer-links dl dd:hover{
+    color: #e58ecf;
+}
+.footer .footer-links .col-contact{
+    float: right;
+    width: 240px;
+    height: 120px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 12px;
+}
+.footer .footer-links .col-contact a img{
+    width: 85px;
+    height: 85px;
+}
+.footer .footer-links .col-contact .iphone{
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+/* 尾部end */
+
+
+
+
+/* 注释 */
+.clearfix::after{
+    content:'';
+    clear:both;
+    display: block;
+}
